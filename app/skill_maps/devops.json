@@ -1,0 +1,9 @@
+{
+    "role": "DevOps Engineer",
+    "required_skills": [
+      "linux", "aws", "docker", "jenkins", "kubernetes",
+      "terraform", "git", "ci/cd", "ansible", "monitoring",
+      "scripting", "python", "bash", "cloudformation"
+    ]
+  }
+  

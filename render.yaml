@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: resume-analyzer
+    env: docker
+    plan: free
+    branch: main
+    dockerContext: .
+    dockerfilePath: Dockerfile
+    envVars:
+      - key: FLASK_ENV
+        value: development
