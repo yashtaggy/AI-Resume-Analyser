@@ -74,5 +74,8 @@ def upload_file():
 # Run app
 if __name__ == '__main__':
     os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    import os
+    port = int(os.environ.get("PORT", 5000))  # default to 5000 for local dev
+    app.run(host="0.0.0.0", port=port, debug=True)
+
 
