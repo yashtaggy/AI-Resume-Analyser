@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from app.utils.skill_matcher import analyze_resume
+from utils.skill_matcher import analyze_resume
 import os
 
 app = Flask(__name__)
