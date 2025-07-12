@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        ul {
+            list-style-type: square;
+        }
+    </style>
+</head>
+<body>
+    <h1>Analysis Result for {{ role }}</h1>
+
+    {% if result %}
+        <h3>Matched Skills:</h3>
+        <ul>
+            {% for skill in result['matched_skills'] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Missing Skills:</h3>
+        <ul>
+            {% for skill in result['missing_skills'] %}
+                <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+
+        <h3>Suggestions:</h3>
+        <ul>
+            {% for tip in result['tips'] %}
+                <li>{{ tip }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No analysis result available.</p>
+    {% endif %}
+</body>
+</html>

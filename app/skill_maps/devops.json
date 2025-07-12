@@ -1,9 +1,28 @@
 {
-    "role": "DevOps Engineer",
-    "required_skills": [
-      "linux", "aws", "docker", "jenkins", "kubernetes",
-      "terraform", "git", "ci/cd", "ansible", "monitoring",
-      "scripting", "python", "bash", "cloudformation"
-    ]
-  }
-  
+  "role": "DevOps Engineer",
+  "skills": [
+    "CI/CD",
+    "Docker",
+    "Kubernetes",
+    "Linux",
+    "AWS",
+    "Terraform",
+    "Jenkins",
+    "Ansible",
+    "Monitoring",
+    "Scripting"
+  ],
+  "tools": [
+    "GitHub Actions",
+    "GitLab CI",
+    "Prometheus",
+    "Grafana",
+    "Nginx"
+  ],
+  "formatting_tips": [
+    "Use bullet points for clarity",
+    "Highlight measurable achievements",
+    "Keep resume within 1-2 pages",
+    "Use consistent formatting and fonts"
+  ]
+}

@@ -1,19 +1,36 @@
+import os
 import json
-import re
+import fitz  # PyMuPDF
 
-def load_required_skills(file_path):
-    with open(file_path, 'r') as f:
-        data = json.load(f)
-        return data["required_skills"]
+def extract_text_from_pdf(pdf_path):
+    text = ""
+    doc = fitz.open(pdf_path)
+    for page in doc:
+        text += page.get_text()
+    return text.lower()
 
-def extract_skills_from_text(text):
-    text = text.lower()
-    # Tokenize simply by splitting on non-word characters
-    words = set(re.findall(r'\b\w+\b', text))
-    return words
+def load_role_config(role):
+    config_path = os.path.join("app", "skill_maps", f"{role}.json")
+    with open(config_path, "r") as file:
+        return json.load(file)
 
-def compare_skills(resume_text, required_skills):
-    resume_words = extract_skills_from_text(resume_text)
-    matched = [skill for skill in required_skills if skill.lower() in resume_words]
-    missing = [skill for skill in required_skills if skill.lower() not in resume_words]
-    return matched, missing
+def analyze_resume(pdf_path, role):
+    extracted_text = extract_text_from_pdf(pdf_path)
+    role_data = load_role_config(role)
+
+    present_skills = []
+    missing_skills = []
+
+    for skill in role_data["skills"]:
+        if skill.lower() in extracted_text:
+            present_skills.append(skill)
+        else:
+            missing_skills.append(skill)
+
+    return {
+        "role": role_data["role"],
+        "present_skills": present_skills,
+        "missing_skills": missing_skills,
+        "tools": role_data["tools"],
+        "tips": role_data["formatting_tips"]
+    }
