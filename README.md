@@ -40,5 +40,7 @@ An intelligent, AI-powered web application that analyzes resumes against job-spe
 
 ---
 
-## 📁 Project Structure
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first to discuss your proposed change.
 
