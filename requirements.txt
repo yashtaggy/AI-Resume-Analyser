@@ -2,3 +2,5 @@ Flask==2.3.2
 python-docx
 pdfminer.six
 PyMuPDF
+fuzzywuzzy
+python-Levenshtein

@@ -8,21 +8,21 @@
 <body class="bg-light">
   <div class="container py-5">
     <h1 class="mb-4">AI Resume Analyzer</h1>
-    <form method="POST" action="/analyze" enctype="multipart/form-data">
-      <div class="mb-3">
-        <label for="role" class="form-label">Select Your Desired Role</label>
-        <select class="form-select" name="role" required>
-          <option value="">-- Choose Role --</option>
-          <option value="devops">DevOps Engineer</option>
-          <!-- Add more options like 'frontend', 'qa' later -->
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="resume" class="form-label">Upload Your Resume (PDF)</label>
-        <input type="file" class="form-control" name="resume" accept=".pdf" required>
-      </div>
-      <button type="submit" class="btn btn-primary">Analyze Resume</button>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+      <label for="role">Select Job Role:</label>
+      <select name="role" class="form-select" required>
+        <option value="data_scientist">Data Scientist</option>
+        <option value="devops_engineer">DevOps Engineer</option>
+        <option value="frontend_developer">Frontend Developer</option>
+      </select>
+    
+      <br><br>
+      <label for="resume">Upload Resume (PDF):</label>
+      <input type="file" name="resume" accept=".pdf" required>
+      <br><br>
+      <input type="submit" value="Analyze">
     </form>
+    
   </div>
 </body>
 </html>

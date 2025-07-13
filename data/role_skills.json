@@ -1,0 +1,8 @@
+{
+    "DevOps Engineer": ["CI/CD", "Docker", "Kubernetes", "AWS", "Terraform", "Linux", "Monitoring", "Python", "Jenkins"],
+    "Frontend Developer": ["HTML", "CSS", "JavaScript", "React", "Vue.js", "TypeScript", "Responsive Design", "Redux"],
+    "Backend Developer": ["Node.js", "Django", "Flask", "SQL", "MongoDB", "REST APIs", "Authentication", "Docker"],
+    "Data Scientist": ["Python", "Pandas", "NumPy", "Scikit-learn", "TensorFlow", "Data Visualization", "Statistics", "SQL"],
+    "UI/UX Designer": ["Figma", "Wireframing", "User Research", "Adobe XD", "Prototyping", "Design Thinking"]
+  }
+  
