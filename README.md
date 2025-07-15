@@ -36,7 +36,7 @@ An intelligent, AI-powered web application that analyzes resumes against job-spe
 | PDF Parsing | PyMuPDF (`fitz`)                |
 | Deployment  | Docker, Render                  |
 | DevOps      | Jenkins for CI/CD pipeline      |
-| Others      | Git, GitHub Actions (optional)  |
+| Others      | Git, GitHub Actions             |
 
 ---
 
